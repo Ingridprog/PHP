@@ -1,85 +1,103 @@
 <?php
     class Carro{
-        // Propriedades
-        var $tipo; // 1= Passeio 2= Esporte 3= Utilitário
+        //Propriedades
+        var $tipo; // 1=Passeio 2=Esporte 3=Utilitário
         var $velocidadeMaxima;
         var $nome;
         var $liga;
         var $velocidade;
 
-        // Método construtor - automaticamente executado ao instanciar um objeto, mesmo nome da classe*
-        function Carro($tp, $no){
+        //Métodos
 
-            // inicia com o carro desligado - this se refere a classe, aponta para a propriedade $liga da classe
-           $this->liga = false;
+        //Construtor - executa quando instancia a classe
+        function carro($tp, $no){
+            // vai iniciar desligado
+            $this->liga = false;
 
-           // nome
-           $this ->nome = $no;
+            $this->nome = $no;
 
-           // quando o carro é criado a velocidade é 0
-           $this ->velocidade = 0;
+            $this->velocidade = 0;
 
-            // definindo o tipo
-           // definindo a velocidade maxima de acordo com o tipo 
-           if($tp == 1){
-               $this ->velocidadeMaxima = 160;
-               $this ->tipo = "Passeio";
-           }elseif($tp == 2){
-               $this ->velocidadeMaxima = 300; 
-               $this ->tipo = "Esporte";
-           }else{
-               $this ->velocidadeMaxima = 100;
-               $this ->tipo = "Utilitário";
-           }
+            if($tp == 1){
 
+                $this->tipo = "Passeio";
+
+                $this->velocidadeMaxima = 160;
+
+            }elseif($tp == 2){
+
+                $this->tipo = "Esporte";
+
+                $this->velocidadeMaxima = 300;
+
+            }else{
+                $this->tipo = "Utilitário";
+
+                $this->velocidadeMaxima = 100;
+
+            }
         }
 
-        // método para ligar o carro
+        // Ligar o Carro
         function ligar(){
             $this ->liga = true;
         }
 
-        // método para desligar o carro
+        // Desligar o Carro
         function desligar(){
-            $this ->liga = false;
+            $this->liga = false;
         }
 
-        // método velocidade
+        // Velocidade
         function velocidade($vel){
-            if($vel > $this ->velocidadeMaxima){
-                $this ->velocidade = $this ->velocidadeMaxima;
+            if($vel > $this->velocidadeMaxima){
+                $this->velocidade = $this->velocidadeMaxima;
             }else{
-                $this ->velocidade = $vel;
+                $this->velocidade = $vel;
             }
         }
 
-        // método para listar as características do carro
-        function id(){
+        // lista 
+        function lista(){
+
             echo("<hr>");
-            echo("Nome do Carro: ".$this->nome);
-            echo("<br/> Tipo do Carro: ".$this->tipo);
-            echo("<br/> Velocidade máxima do Carro: ".$this->velocidadeMaxima);
-            echo("<br/> Velocidade atual: ".$this->velocidade);
+
+            echo("Nome do Carro: ".$this->nome."<br/>");
+
+            echo("Tipo do Carro: ".$this->tipo."<br/>");
+
+            echo("Velocidade máxima do Carro: ".$this->velocidadeMaxima."<br/>");
+
+            echo("Velocidade atual: ".$this->velocidade."<br/>");
+            
             if($this->liga){
-                echo("<br/> Carro Ligado!");
+
+                echo("Carro Ligado <br/>");
+
             }else{
-                echo("<br/> Carro Desligado!");
+
+                echo("Desligado <br/>");
             }
+
+            
         }
     }
 
-    // Criando objetos
-    $carro1 = new Carro (2, "Rapid");
+    //criando objeto
+    $carro1 = new Carro(2, "Rapit");
     $carro2 = new Carro(3, "Carregador");
     $carro3 = new Carro(1, "Basic");
 
+    // Chama um método
     $carro1->ligar();
-    $carro2->velocidade(80);
+    $carro3->velocidade(100);
+    $carro1->lista();
+    $carro2->lista();
+    $carro3->lista();
 
-    $carro1-> id();
-    $carro2-> id();
-    $carro3-> id();
+   
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
