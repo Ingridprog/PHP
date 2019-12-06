@@ -23,7 +23,7 @@
             }  
         }
 
-        include "conexao.inc";
+        include "../conexao.inc";
 
         echo("Página Inicial");
 

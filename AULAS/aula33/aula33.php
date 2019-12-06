@@ -16,7 +16,7 @@
                 <td>Categoria</td>
             </tr>
             <?php
-                include "conexao.inc";
+                include "../conexao.inc";
 
                 $cat1 = $_POST['txtcat1'];
                 $cat2 = $_POST['txtcat2'];

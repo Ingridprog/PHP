@@ -16,7 +16,7 @@
                 <td>Categoria</td>
             </tr>
             <?php
-                include "conexao.inc";
+                include "../conexao.inc";
 
                 $pesquisa = '_o%';
 

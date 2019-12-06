@@ -1,5 +1,5 @@
 <?php
-    include "conexao.inc";
+    include "../conexao.inc";
 
     $cat = $_POST['txtcat'];
 

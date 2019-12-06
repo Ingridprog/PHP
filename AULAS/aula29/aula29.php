@@ -1,5 +1,5 @@
 <?php
-    include "conexao.inc";
+    include "../conexao.inc";
 
     // Comando para executar no bd
     $resultado = mysqli_query($conn, "SELECT * FROM tbl_cadastro");

@@ -1,5 +1,5 @@
 <?php
-    include "conexao.inc";
+    include "../conexao.inc";
 
     $codigo = $_POST['txtcodigo'];
     $produto = $_POST['txtproduto'];

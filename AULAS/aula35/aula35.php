@@ -1,5 +1,5 @@
 <?php
-    include "conexao.inc";
+    include "../conexao.inc";
 
     $sql = 'DELETE FROM tbl_cadastro WHERE codigo = 7';
 

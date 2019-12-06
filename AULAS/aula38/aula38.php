@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        include "conexao.inc";
+        include "../conexao.inc";
 
         $sql = "UPDATE tbl_cadastro SET telefone = '(11)3683-3077' WHERE codigo = 2";
 

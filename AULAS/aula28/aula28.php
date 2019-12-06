@@ -1,5 +1,5 @@
 <?php
-    include "conexao.inc";
+    include "../conexao.inc";
 
     // fecha o arquivo de conexão 
     mysqli_close($conn);

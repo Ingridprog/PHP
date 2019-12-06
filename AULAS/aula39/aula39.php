@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        include "conexao.inc";
+        include "../conexao.inc";
 
         $user = $_POST['txtusername'];
         $password = $_POST['txtpassword'];

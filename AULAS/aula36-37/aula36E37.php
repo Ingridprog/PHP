@@ -1,5 +1,5 @@
 <?php
-    include "conexao.inc";
+    include "../conexao.inc";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
